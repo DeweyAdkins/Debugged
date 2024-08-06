@@ -1,0 +1,16 @@
+Null Pointer Exception:
+- Line: int[] nullArray = null; calculateAverage(nullArray);
+- Fix: Added a check at the beginning of the method to throw an IllegalArgumentException if the array is null or empty.
+
+Array Index Out of Bounds Exception:
+- Line: int[] emptyArray = {}; calculateAverage(emptyArray);
+- Fix: The same check for null and empty arrays at the beginning of the method prevents this exception.
+
+Logic Error:
+- Line: return sum / (numbers.length + 1);
+- Fix: Corrected the division to return sum / numbers.length;.
+
+Steps to Identify and Fix Issues Using the Debugger:
+1. Null Pointer Exception: The debugger showed a NullPointerException at the line where the method was called with null. Adding a check at the start of the method resolved this.
+2. Array Index Out of Bounds Exception: The debugger highlighted an empty array scenario. The same check for null and empty arrays fixed this.
+3. Logic Error: By stepping through the code, it was evident that the division was incorrect. The debugger helped identify the addition of 1 to the array length, which was fixed by removing the + 1.
